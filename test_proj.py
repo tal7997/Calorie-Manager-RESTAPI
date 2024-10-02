@@ -5,8 +5,8 @@ import sys
 
 filename = input("filename=")
 
-#line = "http://ec2-16-16-205-202.eu-north-1.compute.amazonaws.com:3000"
-line = "http://localhost:3000"
+line = "https://calorie-manager-restapi-3086ffee1671.herokuapp.com"
+#line = "http://localhost:3000"
 
 output = open(filename,"w")
 

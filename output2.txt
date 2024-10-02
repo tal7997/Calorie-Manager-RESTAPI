@@ -1,0 +1,42 @@
+https://calorie-manager-restapi-3086ffee1671.herokuapp.com
+
+testing getting the about
+-------------------------
+url=https://calorie-manager-restapi-3086ffee1671.herokuapp.com/about/
+data.status_code=200
+b'[{"firstname":"Shay","lastname":"Shuve","id":206842585,"email":"shayshov@gmail.com"},{"firstname":"Leor","lastname":"Marshall","id":315421990,"email":"mleor110@gmail.com"},{"firstname":"Tal","lastname":"Zechariya","id":318686532,"email":"tal.zechariya@gmail.com"}]'
+data.text=[{"firstname":"Shay","lastname":"Shuve","id":206842585,"email":"shayshov@gmail.com"},{"firstname":"Leor","lastname":"Marshall","id":315421990,"email":"mleor110@gmail.com"},{"firstname":"Tal","lastname":"Zechariya","id":318686532,"email":"tal.zechariya@gmail.com"}]
+[{'firstname': 'Shay', 'lastname': 'Shuve', 'id': 206842585, 'email': 'shayshov@gmail.com'}, {'firstname': 'Leor', 'lastname': 'Marshall', 'id': 315421990, 'email': 'mleor110@gmail.com'}, {'firstname': 'Tal', 'lastname': 'Zechariya', 'id': 318686532, 'email': 'tal.zechariya@gmail.com'}]
+firstname=Shay
+lastname=Shuve
+id=206842585
+Shay Shuve 206842585
+
+
+testing getting the report - 1
+------------------------------
+url=https://calorie-manager-restapi-3086ffee1671.herokuapp.com/report/?user_id=123123&year=2024&month=3
+data.status_code=500
+b'{"message":"Failed to generate report","error":{}}'
+data.text={"message":"Failed to generate report","error":{}}
+problem
+'dinner'
+
+
+testing adding calorie consumption
+----------------------------------
+url=https://calorie-manager-restapi-3086ffee1671.herokuapp.com/addcalories/
+data.status_code=500
+b'{"message":"Failed to add calorie entry","error":{}}'
+data.text={"message":"Failed to add calorie entry","error":{}}
+
+
+testing getting the report - 2
+------------------------------
+url=https://calorie-manager-restapi-3086ffee1671.herokuapp.com/report/?user_id=123123&year=2024&month=4
+data.status_code=500
+b'{"message":"Failed to generate report","error":{}}'
+data.text={"message":"Failed to generate report","error":{}}
+problem
+'dinner'
+
