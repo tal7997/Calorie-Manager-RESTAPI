@@ -1,0 +1,40 @@
+ http://localhost:3000
+
+testing getting the about
+-------------------------
+url=http://localhost:3000/about/
+data.status_code=200
+b'[{"firstname":"Shay","lastname":"Shuve","id":206842585,"email":"shayshov@gmail.com"},{"firstname":"Leor","lastname":"Marshall","id":315421990,"email":"mleor110@gmail.com"},{"firstname":"Tal","lastname":"Zechariya","id":318686532,"email":"tal.zechariya@gmail.com"}]'
+data.text=[{"firstname":"Shay","lastname":"Shuve","id":206842585,"email":"shayshov@gmail.com"},{"firstname":"Leor","lastname":"Marshall","id":315421990,"email":"mleor110@gmail.com"},{"firstname":"Tal","lastname":"Zechariya","id":318686532,"email":"tal.zechariya@gmail.com"}]
+[{'firstname': 'Shay', 'lastname': 'Shuve', 'id': 206842585, 'email': 'shayshov@gmail.com'}, {'firstname': 'Leor', 'lastname': 'Marshall', 'id': 315421990, 'email': 'mleor110@gmail.com'}, {'firstname': 'Tal', 'lastname': 'Zechariya', 'id': 318686532, 'email': 'tal.zechariya@gmail.com'}]
+firstname=Shay
+lastname=Shuve
+id=206842585
+Shay Shuve 206842585
+
+
+testing getting the report - 1
+------------------------------
+url=http://localhost:3000/report/?user_id=123123&year=2024&month=3
+data.status_code=200
+b'{"breakfast":[],"lunch":[],"dinner":[],"other":[]}'
+data.text={"breakfast":[],"lunch":[],"dinner":[],"other":[]}
+[]
+
+
+testing adding calorie consumption
+----------------------------------
+url=http://localhost:3000/addcalories/
+data.status_code=200
+b'{"message":"Calorie entry added successfully","data":{"user_id":123123,"year":2024,"month":4,"day":2,"description":"milk 9","category":"lunch","amount":8,"_id":"66fbf2d43c3d8d4e0b092515","__v":0}}'
+data.text={"message":"Calorie entry added successfully","data":{"user_id":123123,"year":2024,"month":4,"day":2,"description":"milk 9","category":"lunch","amount":8,"_id":"66fbf2d43c3d8d4e0b092515","__v":0}}
+
+
+testing getting the report - 2
+------------------------------
+url=http://localhost:3000/report/?user_id=123123&year=2024&month=4
+data.status_code=200
+b'{"breakfast":[],"lunch":[{"day":2,"description":"milk 9","amount":8}],"dinner":[],"other":[]}'
+data.text={"breakfast":[],"lunch":[{"day":2,"description":"milk 9","amount":8}],"dinner":[],"other":[]}
+[]
+
